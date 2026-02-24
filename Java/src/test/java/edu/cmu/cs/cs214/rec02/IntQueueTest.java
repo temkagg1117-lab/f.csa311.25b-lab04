@@ -38,29 +38,29 @@ public class IntQueueTest {
     public void setUp() {
         // comment/uncomment these lines to test each class
         mQueue = new ArrayIntQueue();
-
+        // ArrayIntQueue-г шалгах
         testList = new ArrayList<>(List.of(1, 2, 3));
     }
-
+    /** Queue хоосон байгааг шалгах **/
     @Test
     public void testIsEmpty() {
         // This is an example unit tests
         assertTrue(mQueue.isEmpty());
     }
-
+    /** Queue-д нэг элемент нэмэхэд хоосон биш болж байгааг шалгах **/
     @Test
     public void testNotEmpty() {
        
         mQueue.enqueue(1);
         assertFalse(mQueue.isEmpty());
     }
-
+    /** Хоосон queue-ийн peek() null буцааж байгааг шалгах **/
     @Test
     public void testPeekEmptyQueue() {
         
         assertNull(mQueue.peek());
     }
-
+    /** Queue-д хэд хэдэн элемент нэмсний дараа peek() зөв элементийг буцааж байгааг шалгах **/
     @Test
     public void testPeekNoEmptyQueue() {
         
